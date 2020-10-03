@@ -1,0 +1,102 @@
+@import"variables";
+
+.portofolio__main__photograph__header {
+  display: $display-flex;
+  flex-direction: column-reverse;
+  padding-block-end: 65px;
+  padding-block-start: 61px;
+}
+
+.portofolio__main__photograph__header_heading {
+  max-width: 457px;
+  font-size: $desktop-font-size;
+  line-height: $desktop-line-height;
+  color: #000000;
+}
+
+.portofolio__main__back {
+  @include  reset-size-gray-normal-text;
+  padding-block-end: 61px;
+  margin-block-start: -($padding-inline-start);
+  text-decoration-line: $none-decoration;
+}
+
+.portofolio__main__back::before {
+  content: " ← ";
+}
+
+.portofolio__main__photograph__slider_description {
+  @include reset-size-black-normal-text;
+  max-width: 585px;
+} 
+
+.portofolio__main__photograph__slider_description:nth-of-type(2) {
+  padding-block-end: 82px;
+}
+
+.portofolio__main__photograph__about__navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-inline-start: -43px;
+  padding-inline-end: 15px;
+  padding-block-start: 92px;
+  padding-block-end: 75px;
+}
+
+
+.portofolio__main__photograph__about__navigation__camera_list__date,
+.portofolio__main__photograph__about__navigation__camera_list__location,
+.portofolio__main__photograph__about__navigation__camera_list__camera,
+.portofolio__main__photograph__about__navigation__camera_list__lens {
+  @include reset-size-gray-normal-text;
+}
+
+.portofolio__main__photograph__about__navigation__camera_list__time,
+.portofolio__main__photograph__about__navigation__camera_list__place,
+.portofolio__main__photograph__about__navigation__camera_list__brand,
+.portofolio__main__photograph__about__navigation__camera_list__size {
+  @include reset-size-black-normal-text;
+  font-weight: bold;
+}
+
+.portofolio__main__research_photo__morroco {
+  padding-inline-end: 15px;
+}
+
+.portofolio__main__research_photo__header_heading {
+  display: $none-decoration;
+}
+.portofolio__main__research_photo__morroco_features {
+  @include reset-size-black-normal-text;
+}
+
+.portofolio__main__research_photo__morroco_experiences {
+  @include reset-size-gray-normal-text;
+  padding-block-end: $header-font-size;
+  padding-block-start: $header-font-size;  
+}
+
+@media(min-width: $min-width) {
+  .portofolio__main__photograph__about {
+    max-width: 443px;
+  }
+  .portofolio__main__photograph__header_heading {
+    font-size: 72px;
+    line-height: 80px;
+  }
+
+  .portofolio__main__research_photo {
+    display: $display-flex;
+    flex-direction: $row-direction;
+  }
+
+  .portofolio__main__research_photo__morroco__header_heading {
+    margin-block-start: $text-black-font-size;
+  }
+
+  .portofolio__main__research_photo__morroco {
+    padding-inline-start: 146px;
+    max-width: 518px;
+    padding-block-start: 87px;
+  }
+}

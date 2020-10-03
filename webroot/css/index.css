@@ -1,0 +1,553 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: local("DM Sans Regular"), local("Dm-Sans-Regular"), url("../fonts/dm_sans_400.woff2") formt("woff2"), url("../fonts/dm_sans_400.woff") format("woff"); }
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-style: medium;
+  src: local("DM Sans Regular"), local("Dm-Sans-Regular"), url("../fonts/dm_sans_400.woff2") formt("woff2"), url("../fonts/dm_sans_400.woff") format("woff"); }
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 500;
+  font-style: italic;
+  src: local("DM Sans Italic"), local("Dm-Sans-italic"), url("../fonts/dm_sans_400_italic.woff2") formt("woff2"), url("../fonts/dm_sans_400_italic.woff") format("woff"); }
+
+@font-face {
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-style: italic;
+  src: local("DM Sans Italic"), local("Dm-Sans-Regular"), url("../fonts/dm_sans_700_italic.woff2") formt("woff2"), url("../fonts/dm_sans_700_italic.woff") format("woff"); }
+
+@font-face {
+  font-family: " DM Serif Display";
+  font-weight: 400;
+  font-style: normal;
+  src: local(" DM Serif Display Regular "), local(" DM-Serif-Display-Regular"), url("../fonts/dm_sans_400.woff2") formt("woff2"), url("../fonts/dm_sans_400.woff") format("woff"); }
+
+@font-face {
+  font-family: " DM Serif Display";
+  font-weight: 400;
+  font-style: normal;
+  src: local(" DM Serif Display Italic "), local(" DM-Serif-Display-talic"), url("../fonts/dm_sans_400_italic.woff2") formt("woff2"), url("../fonts/dm_sans_400_italic.woff") format("woff"); }
+
+body {
+  margin: 0; }
+
+html {
+  font-family: 'Dm Sans', sans-serif; }
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', serif; }
+
+h2, h3 {
+  font-size: 40px;
+  line-height: 48px;
+  color: #000000; }
+
+li {
+  list-style: none; }
+
+a:hover,
+li a {
+  text-decoration: underline; }
+
+@media (min-width: 1200px) {
+  h2, h3 {
+    font-size: 52px;
+    line-height: 64px; } }
+
+header {
+  display: block; }
+
+:root {
+  --gray-font-size: 16px;
+  --default-margin: 0;
+  --padding-inline: 14px;
+  --none-decoration: none;
+  --auto-margin: auto;
+  --text-gray-line-height: 24px;
+  --text-black-line-heigth: 32px;
+  --z-index: 1; }
+
+.portofolio__header {
+  background-color: #434CCC;
+  color: #FFFFFF;
+  position: relative;
+  padding-inline-end: var(--padding-inline);
+  padding-inline-start: var(--padding-inline); }
+
+.portofolio__header_heading {
+  font-size: var(--text-gray-line-height);
+  line-height: var(--text-black-line-heigth);
+  color: #FFFFFF;
+  padding-block-start: var(--gray-font-size);
+  padding-block-end: var(--gray-font-size);
+  margin-block-start: var(--default-margin);
+  text-transform: uppercase; }
+
+.portofolio_header_homepage {
+  display: var(--none-decoration); }
+
+.portofolio__header_heading__menu_navigation__lists_heading__link {
+  text-decoration: var(--none-decoration);
+  line-height: var(--text-gray-line-height);
+  color: #FFFFFF; }
+
+.portofolio__header__label {
+  position: absolute;
+  top: 33%;
+  right: var(--default-margin);
+  z-index: var(--z-index); }
+
+.portofolio__header_heading__menu_navigation__lists_heading {
+  padding-block-end: var(--gray-font-size); }
+
+.portofolio__header__menu_svg {
+  position: absolute;
+  right: 11%;
+  top: 40%; }
+
+.portofolio__header__label__a11y {
+  color: transparent;
+  padding: var(--gray-font-size); }
+
+.portofolio__header_heading__menu_navigation {
+  padding: var(--text-gray-line-height);
+  position: absolute;
+  z-index: 3;
+  top: var(--default-margin);
+  right: var(--default-margin);
+  bottom: var(--default-margin);
+  width: 150px;
+  height: 165px;
+  box-shadow: 0 0 50px rgba(204, 181, 181, 0.5);
+  transform: translateY(-127%);
+  transition: transform 0.3s; }
+
+[type="checkbox"]:checked ~ .portofolio__header .portofolio__header_heading__menu_navigation {
+  transform: translateX(var(--default-margin));
+  background-color: #434CCC; }
+
+[type="checkbox"]:checked ~ .portofolio__header .portofolio__header__label {
+  position: absolute;
+  z-index: 2;
+  right: var(--default-margin);
+  bottom: var(--default-margin);
+  left: var(--default-margin); }
+
+body > [type="checkbox"]:checked ~ .portofolio__main {
+  z-index: var(--z-index); }
+
+@media (min-width: 1200px) {
+  .portofolio__header {
+    max-width: 80%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-inline-end: 10%;
+    padding-inline-start: 10%; }
+  .portofolio__header_heading {
+    font-size: 40px;
+    line-height: 48px;
+    margin-block-end: var(--default-margin); }
+  .portofolio__header_heading__menu_navigation__lists {
+    display: flex;
+    flex-direction: row; }
+  .portofolio__header_heading__menu_navigation__lists_heading {
+    padding-inline-end: var(--text-black-line-heigth); }
+  .portofolio__header_heading__menu_navigation {
+    background-color: transparent;
+    width: var(--auto-margin);
+    height: var(--auto-margin);
+    box-shadow: var(--none-decoration);
+    transform: var(--none-decoration);
+    transition: var(--none-decoration);
+    padding-block-start: 7px;
+    padding-inline-end: 10%; }
+  .portofolio__header .portofolio__header__label {
+    display: var(--none-decoration); }
+  .portofolio__header__menu_svg {
+    display: var(--none-decoration); } }
+
+.portofolio__main {
+  background-color: rgba(67, 76, 204, 0.05);
+  padding-inline-start: 14px;
+  margin-block-start: -20px; }
+
+@media (min-width: 1200px) {
+  .portofolio__main {
+    max-width: 80%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-inline-end: 10%;
+    padding-inline-start: 10%; } }
+
+.portofolio__main__research_photo,
+.portofolio__main__updating,
+p,
+h2,
+.portofolio__main__back {
+  display: block; }
+
+.portofolio__main__photograph__header {
+  display: flex;
+  flex-direction: column-reverse;
+  padding-block-end: 65px;
+  padding-block-start: 61px; }
+
+.portofolio__main__photograph__header_heading {
+  max-width: 457px;
+  font-size: 52px;
+  line-height: 64px;
+  color: #000000; }
+
+.portofolio__main__back {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: normal;
+  padding-block-end: 61px;
+  margin-block-start: -14px;
+  text-decoration-line: none; }
+
+.portofolio__main__back::before {
+  content: " ← "; }
+
+.portofolio__main__photograph__slider_description {
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+  max-width: 585px; }
+
+.portofolio__main__photograph__slider_description:nth-of-type(2) {
+  padding-block-end: 82px; }
+
+.portofolio__main__photograph__about__navigation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-inline-start: -43px;
+  padding-inline-end: 15px;
+  padding-block-start: 92px;
+  padding-block-end: 75px; }
+
+.portofolio__main__photograph__about__navigation__camera_list__date,
+.portofolio__main__photograph__about__navigation__camera_list__location,
+.portofolio__main__photograph__about__navigation__camera_list__camera,
+.portofolio__main__photograph__about__navigation__camera_list__lens {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: normal; }
+
+.portofolio__main__photograph__about__navigation__camera_list__time,
+.portofolio__main__photograph__about__navigation__camera_list__place,
+.portofolio__main__photograph__about__navigation__camera_list__brand,
+.portofolio__main__photograph__about__navigation__camera_list__size {
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+  font-weight: bold; }
+
+.portofolio__main__research_photo__morroco {
+  padding-inline-end: 15px; }
+
+.portofolio__main__research_photo__header_heading {
+  display: none; }
+
+.portofolio__main__research_photo__morroco_features {
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000; }
+
+.portofolio__main__research_photo__morroco_experiences {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: normal;
+  padding-block-end: 40px;
+  padding-block-start: 40px; }
+
+@media (min-width: 1200px) {
+  .portofolio__main__photograph__about {
+    max-width: 443px; }
+  .portofolio__main__photograph__header_heading {
+    font-size: 72px;
+    line-height: 80px; }
+  .portofolio__main__research_photo {
+    display: flex;
+    flex-direction: row; }
+  .portofolio__main__research_photo__morroco__header_heading {
+    margin-block-start: 18px; }
+  .portofolio__main__research_photo__morroco {
+    padding-inline-start: 146px;
+    max-width: 518px;
+    padding-block-start: 87px; } }
+
+.portofolio__main__updating {
+  background-color: #FFDD78;
+  margin-inline-start: -14px;
+  padding-inline-start: 15px;
+  padding-block-start: 63px;
+  padding-block-end: 54px;
+  padding-inline-end: 15px; }
+
+.portofolio__main__updating__header_heading {
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: normal; }
+
+.portofolio__main__updating__form__label {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  padding-block-end: 16px; }
+
+.portofolio__main__updating__form__input {
+  background-color: 16px;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding-inline-start: 16px;
+  padding-block-end: 11px;
+  padding-block-start: 13px;
+  margin-block-start: 12px;
+  margin-block-end: 16px; }
+
+.portofolio__main__updating__form__submit {
+  background-color: #434CCC;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-inline-start: 0;
+  padding-block-start: 13px;
+  padding-block-end: 11px;
+  padding-inline-end: 45px;
+  padding-inline-start: 45px; }
+
+@media (min-width: 1200px) {
+  .portofolio__main__updating {
+    margin-inline-start: -13%;
+    padding-inline-start: 13%;
+    margin-inline-end: -13%; }
+  .portofolio__main__updating__form {
+    display: flex;
+    flex-direction: row; }
+  .portofolio__main__updating__form__heading {
+    max-width: 382px; }
+  .portofolio__main__updating__form__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-inline-start: 218px;
+    padding-block-start: 52px; }
+  .portofolio__main__updating__form__label {
+    margin-inline-start: -54px; }
+  .portofolio__main__updating__form__input {
+    padding-block-end: 19px;
+    padding-inline-end: 142px;
+    margin-inline-end: 54px; }
+  .portofolio__main__updating__form__submit {
+    margin-block-start: 30px;
+    margin-block-end: 104px;
+    padding-inline-end: 25px;
+    padding-inline-start: 25px; } }
+
+footer {
+  display: block; }
+
+.portofolio__footer {
+  background-color: 16px;
+  padding-block-start: 75px;
+  padding-inline-start: 14px;
+  padding-inline-end: 15px; }
+
+.portofolio__footer__header_heading {
+  font-size: 24px;
+  line-height: 32px;
+  color: #000000;
+  text-transform: uppercase;
+  font-style: normal; }
+
+.portofolio__footer__header_description {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: normal;
+  padding-block-start: 22px;
+  padding-block-end: 22px; }
+
+.portofolio__footer__social_media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-inline-start: -39px;
+  max-width: 68px;
+  padding-block-end: 78px; }
+
+.portofolio__footer__homepage__heading {
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000; }
+
+.portofolio__footer__map {
+  padding-block-end: 69px;
+  padding-block-start: 77px; }
+
+.portofolio__footer__homepage__navigation {
+  padding-inline-start: 0; }
+
+.portofolio__footer__homepage__navigation_list__link {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: normal;
+  text-decoration: none; }
+
+.portofolio__footer__homepage__navigation_list {
+  padding-block-end: 8px; }
+
+.portofolio__footer__map__navigation__list__experience {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: normal;
+  padding-inline-start: 62px; }
+
+.portofolio__footer__map__navigation__list:nth-of-type(1) {
+  background-image: url("../images/woman_sm.jpg");
+  background-repeat: no-repeat;
+  background-size: 70px;
+  border-radius: 5px; }
+
+.portofolio__footer__map__navigation__list:nth-of-type(2) {
+  background-image: url("../images/passage_sm.jpg");
+  background-repeat: no-repeat;
+  background-size: 70px;
+  border-radius: 5px; }
+
+.portofolio__footer__map__navigation__list__date {
+  font-size: 18px;
+  line-height: 32px;
+  color: #000000;
+  font-size: 12px;
+  font-weight: bold;
+  padding-inline-start: 62px; }
+
+.portofolio__footer__copyright_modifying {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  mix-blend-mode: normal; }
+
+.portofolio__footer__copyright {
+  border-block-start: rgba(0, 0, 0, 0.1) solid 1px;
+  mix-blend-mode: normal;
+  padding-block-end: 28px;
+  padding-block-start: 26px;
+  margin-inline-end: -15px;
+  margin-inline-start: -14px;
+  padding-inline-start: 14px; }
+
+@media (min-width: 1200px) {
+  .portofolio__footer {
+    max-width: 80%;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    padding-inline-end: 10%;
+    padding-inline-start: 10%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+  .portofolio__footer__header {
+    max-width: 210px; }
+  .portofolio__footer__header_description {
+    padding-block-start: 8px;
+    padding-block-end: 0; }
+  .portofolio__footer__social_media {
+    padding-block-start: 10px; }
+  .portofolio__footer__map {
+    padding-block-start: 8px; }
+  .portofolio__footer__copyright {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-inline-start: -139px;
+    margin-inline-end: -139px; }
+  .portofolio__footer__copyright_modifying {
+    padding-inline-start: 115px;
+    padding-inline-end: 115px; } }
+
+.portofolio__main__research_photo__morroco__social_media {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-inline-start: -39px;
+  max-width: 68px;
+  padding-block-end: 105px; }
+
+.portofolio__footer__social_media__list svg,
+.portofolio__main__research_photo__morroco__social_media svg {
+  fill: black; }
+
+.portofolio__footer__social_media__list__facebook svg:hover,
+.portofolio__main__research_photo__morroco__social_media__list_facebook svg:hover {
+  fill: #434CCC; }
+
+.portofolio__footer__social_media__list__twittter svg:hover,
+.portofolio__main__research_photo__morroco__social_media__list_twitter svg:hover {
+  fill: rgba(0, 0, 0, 0.5); }
+
+.portofolio__footer__social_media__list__instagram svg:hover,
+.portofolio__main__research_photo__morroco__social_media__list_instagram svg:hover {
+  fill: #c56565; }
+
+.portofolio__main__photograph__slider_active img {
+  width: 100%;
+  border-radius: 5px; }
+
+.portofolio__main__photograph__slider_active {
+  padding-inline-end: 15px; }
+
+.portofolio__main__photograph__slider_images {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto; }
+
+.portofolio__main__photograph__slider_images img {
+  width: 40%;
+  border-radius: 5px;
+  margin-inline-end: 10px;
+  opacity: 0.33; }
+
+.portofolio__main__photograph__slider_images img:nth-of-type(1) {
+  opacity: 1; }
+
+@media (min-width: 1200px) {
+  .portofolio__main__photograph__slider_images {
+    overflow-x: none; }
+  .portofolio__main__photograph__slider_images img {
+    width: 11.5%;
+    border-radius: 5px; } }

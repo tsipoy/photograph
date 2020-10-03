@@ -1,0 +1,22 @@
+@import"variables";
+
+.portofolio__main {
+  background-color: rgba(67, 76, 204, 0.05);
+  padding-inline-start: $padding-inline-start;
+  margin-block-start: -20px;
+}
+
+@media(min-width: $min-width) {
+  .portofolio__main {
+    @include  reset-max-width;
+  }
+}
+
+.portofolio__main__research_photo,
+.portofolio__main__updating,
+p,
+h2,
+.portofolio__main__back 
+{
+  display: block;
+}

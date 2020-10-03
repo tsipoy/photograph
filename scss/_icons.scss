@@ -1,0 +1,26 @@
+@import"variables";
+
+.portofolio__main__research_photo__morroco__social_media {
+  @include  reset-icons;
+  padding-block-end: 105px;
+}
+
+.portofolio__footer__social_media__list svg,
+.portofolio__main__research_photo__morroco__social_media svg {
+  fill: black;
+}
+
+.portofolio__footer__social_media__list__facebook svg:hover,
+.portofolio__main__research_photo__morroco__social_media__list_facebook svg:hover{
+  fill: #434CCC;
+}
+
+.portofolio__footer__social_media__list__twittter svg:hover,
+.portofolio__main__research_photo__morroco__social_media__list_twitter svg:hover {
+  fill: $text-gray-color;
+}
+
+.portofolio__footer__social_media__list__instagram svg:hover,
+.portofolio__main__research_photo__morroco__social_media__list_instagram svg:hover {
+  fill: #c56565;
+}

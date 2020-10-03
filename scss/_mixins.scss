@@ -1,0 +1,44 @@
+@import"variables";
+
+@mixin reset-size-gray-normal-text {
+  font-size: $text-gray-font-size;
+  line-height: $text-gray-line-height;
+  color: $text-gray-color;
+  mix-blend-mode: $text-gray-mix-blend-mode;
+}
+
+@mixin reset-size-black-normal-text {
+  font-size: $text-black-font-size;
+  line-height: $text-black-line-height;
+  color: $text-black-color;
+}
+
+@mixin reset-h2-h3 {
+  font-size: $header-font-size;
+  line-height:$header-line-height;
+  color: $text-black-color; 
+}
+
+@mixin reset-h2-h3-desktop {
+  font-size: $desktop-font-size;
+  line-height: $desktop-line-height; 
+}
+
+@mixin reset-icons {
+  display: $display-flex;
+  flex-direction: $row-direction;
+  justify-content: $flex-space;
+  align-items: $align-items;
+  flex-wrap: $flex-wrapping;
+  margin-inline-start: $icons-margin-inline-start;
+  max-width: $icons-max-width;
+}
+
+@mixin reset-max-width {
+  max-width: $body-max-width;
+  margin-inline-start: $auto-margin;
+  margin-inline-end: $auto-margin;
+  padding-inline-end: $body-padding-inline;
+  padding-inline-start: $body-padding-inline;  
+}
+

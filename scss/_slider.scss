@@ -1,0 +1,38 @@
+@import"variables";
+
+.portofolio__main__photograph__slider_active img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.portofolio__main__photograph__slider_active {
+  padding-inline-end: 15px;
+}
+
+.portofolio__main__photograph__slider_images {
+  display: flex;
+  flex-direction: row;
+  overflow-x: $auto-margin;
+}
+
+.portofolio__main__photograph__slider_images img {
+  width: 40%;
+  border-radius: 5px;
+  margin-inline-end: 10px;
+  opacity: 0.33;
+}
+
+.portofolio__main__photograph__slider_images img:nth-of-type(1) {
+  opacity: 1;
+}
+
+@media(min-width: $min-width) {
+  .portofolio__main__photograph__slider_images {
+    overflow-x: $none-decoration;
+  }
+
+  .portofolio__main__photograph__slider_images img {
+  width: 11.5%;
+  border-radius: 5px;
+  }
+}

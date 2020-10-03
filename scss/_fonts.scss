@@ -1,0 +1,67 @@
+@import"variables";
+
+$font-faces : (
+    (
+        name: "DM Sans Regular",
+        system-name: 'Dm-Sans-Regular',
+        style: normal,
+        family: 'DM Sans',
+        weight: 400,
+        filename: 'dm_sans_400',
+    ), 
+    (
+      name: "DM Sans Regular",
+      system-name: 'Dm-Sans-Regular',
+      style: medium,
+      family: 'DM Sans',
+      weight: 500,
+      filename: 'dm_sans_400',
+  ), 
+    (
+      name: "DM Sans Italic",
+      system-name: 'Dm-Sans-italic',
+      style: italic,
+      family: 'DM Sans',
+      weight: 500,
+      filename: 'dm_sans_400_italic',
+    ),
+    (
+      name: "DM Sans Italic",
+      system-name: 'Dm-Sans-Regular',
+      style: italic,
+      family: 'DM Sans',
+      weight: 700,
+      filename: 'dm_sans_700_italic',
+    ),
+    (
+      name: " DM Serif Display Regular ",
+      system-name: ' DM-Serif-Display-Regular',
+      style: normal,
+      family: ' DM Serif Display',
+      weight: 400,
+      filename: 'dm_sans_400',
+    ),
+    (
+      name: " DM Serif Display Italic ",
+      system-name: ' DM-Serif-Display-talic',
+      style: normal,
+      family: ' DM Serif Display',
+      weight: 400,
+      filename: 'dm_sans_400_italic',
+    ),
+);
+
+  
+  
+@each $font in $font-faces {
+    @font-face {
+    font-family: map-get($font, family);
+    font-weight: map-get($font, weight);
+    font-style: map-get($font, style);
+    src: 
+        local(map-get($font, name)),
+        local(map-get($font, system-name)),
+        url("../fonts/#{map-get($font, filename)}.woff2") formt("woff2"),
+        url("../fonts/#{map-get($font, filename)}.woff") format("woff") ;
+    }
+  }
